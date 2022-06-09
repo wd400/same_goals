@@ -1,14 +1,15 @@
 <template>
-<div class="w-full max-w-xs">
+<div class="">
     <h1 class="text-4xl font-bold">{{tologin? 'Login':'Create account'}}</h1>
-Switch to <input class="text-blue-400 text-1xl cursor-pointer font-bold"  type="button" v-on:click="tologin=!tologin" :value="tologin? 'Create account':'Login'"> 
+<span>Switch to <input class="text-blue-400 text-1xl cursor-pointer font-bold"  type="button" v-on:click="tologin=!tologin" :value="tologin? 'Create account':'Login'"> </span>
+<label for="username">Username:</label>
 <div>
-    <label for="username">Username:</label>
+    
     <input class="shadow appearance-none border rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" v-model="username" type="text" id="username" name="username">
 </div>
-
+   <label for="pass">Password:</label>
 <div>
-    <label for="pass">Password:</label>
+ 
     <input class="shadow appearance-none border border-red-500 rounded py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline" v-model="password" type="password" id="pass" name="password"
          placeholder="***********"  minlength="8" required>
 </div>
