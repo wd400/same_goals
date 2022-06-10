@@ -3,6 +3,7 @@
         <h1 class=" text-5xl font-bold"  >Search goals</h1>
       
 <span>
+  <br/>
 <input v-model="query" class="shadow appearance-none border rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" type="text" id="name" name="name" required
        minlength="3" maxlength="100"  v-on:keyup.enter="search" size="10">
 

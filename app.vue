@@ -1,6 +1,6 @@
 <template>
 
-  <div>
+  <div class="h-screen bg-gradient-to-r from-indigo-200 to-pink-100">
 
     <Head>
       <Title>Same Goals</Title>

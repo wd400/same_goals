@@ -1,42 +1,7 @@
-# Nuxt 3 Minimal Starter
+# SameGoals
+## 👉 https://d3t3x9jw381f19.cloudfront.net
 
-Look at the [nuxt 3 documentation](https://v3.nuxtjs.org) to learn more.
+<br>
+ Platform to share our list of life goals and find similar people to connect with, through AI (NLP).
 
-## Setup
-
-Make sure to install the dependencies:
-
-```bash
-# yarn
-yarn install
-
-# npm
-npm install
-
-# pnpm
-pnpm install --shamefully-hoist
-```
-
-## Development Server
-
-Start the development server on http://localhost:3000
-
-```bash
-npm run dev
-```
-
-## Production
-
-Build the application for production:
-
-```bash
-npm run build
-```
-
-Locally preview production build:
-
-```bash
-npm run preview
-```
-
-Checkout the [deployment documentation](https://v3.nuxtjs.org/guide/deploy/presets) for more information.
+ 
