@@ -15,7 +15,10 @@
 
     <ul class="divide-y-2 divide-gray-100">
       <div class="p-3" v-for="todo in todos" v-bind:key="todo">
-      <a :href="`/user/${todo.user}`">
+
+    <NuxtLink :to="`/user/${todo.user}`">
+
+     
      <div>
      
      
@@ -27,7 +30,7 @@
      
 
      </div>
-      </a>
+    </NuxtLink>
      </div>
      </ul>
      </div>

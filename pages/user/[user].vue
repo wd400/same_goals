@@ -1,9 +1,12 @@
 <template>
 <div>
     <p class="text-5xl font-bold" >{{ $route.params.user }} </p>
-        <a  class="text-blue-400 text-1xl font-bold" :href="`/similar/${$route.params.user}`">
-          Find similar
-      </a>
+        <NuxtLink class="text-blue-400 text-1xl font-bold"  :to="`/similar/${$route.params.user}`">
+         Find similar
+    </NuxtLink>
+     
+      
+   
     <div v-if="islogged">
 
 <textarea  class=" shadow  appearance-none border rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" v-model="finaldescription" type="text" id="name" name="name" required

@@ -7,9 +7,13 @@
   </div>
   <div v-else>
      <div v-for="user in finalusers" v-bind:key="user">
-           <a :href="`/user/${user.user}`">
+
+    <NuxtLink :to="`/user/${user.user}`">
+ 
+ 
+
           <div><span class="text-blue-400 text-1xl font-bold">{{user.user}}</span> - {{user.score.toFixed(2)}}</div>
-      </a>
+         </NuxtLink>
      </div>
   </div>
   </div>
