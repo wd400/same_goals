@@ -14,7 +14,7 @@
          placeholder="***********"  minlength="8" required>
 </div>
 
-<input type="button" class="text-blue-400 text-1xl cursor-pointer font-bold" v-on:click="login()" :value="tologin? 'Sign in':'Sign up'">
+<input type="button" class="text-blue-400 text-2xl cursor-pointer font-bold" v-on:click="login()" :value="tologin? 'Sign in':'Sign up'">
 </div>
 </template>
 
