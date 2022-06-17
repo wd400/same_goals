@@ -23,7 +23,7 @@
 <input  v-on:keyup.enter="addtodo" class="shadow  appearance-none border rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" v-model="current_todo" type="text" id="name" name="name" required
        minlength="3" maxlength="100" size="10">
     <button   class="text-3xl text-green-400 font-bold"
-        type="button" v-if="edit" @click="addtodo">
+        type="button"  @click="addtodo">
     ✔
     </button>
 
@@ -50,13 +50,17 @@ const props = defineProps({
 
 const current_todo = ref('');
 
+const loading = ref(false);
+
 const config = useRuntimeConfig();
 
 
 
 async function addtodo(){
 
+if (!loading.value){
 
+loading.value=true
 const result  = await $fetch(config.API_BASE_URL+`/add`,{
 method: 'post', body: { content: current_todo.value} ,server: false,
  credentials: 'include'
@@ -67,6 +71,9 @@ if (result['status']==true){
    current_todo.value="";
 } else {
   alert(result['msg'])
+}
+
+loading.value=false
 }
 
 };

@@ -8,11 +8,11 @@
        minlength="3" maxlength="100"  v-on:keyup.enter="search" size="10">
 
     <button class="px-2"  v-on:click="search" >🔍</button>
- 
+
 </span>
-
+ <br/>
 <div class="w-1/2 bg-white rounded-lg shadow" >
-
+ 
     <ul class="divide-y-2 divide-gray-100">
       <div class="p-3" v-for="todo in todos" v-bind:key="todo">
 
@@ -43,9 +43,15 @@ const todos = ref([]);
 
 const query = ref('');
 
+const loading = ref(false);
+
+
 const config = useRuntimeConfig();
 
 async function search(){
+
+  if (!loading.value){
+  loading.value=true
 
 const result = await $fetch(config.API_BASE_URL+`/search`,{
 method: 'post', body: { content: query.value }, server: false} )
@@ -56,6 +62,8 @@ if (result['status']==true){
   alert(result['msg'])
 }
 
+loading.value=false
+  }
 
 };
 //{"id":433528108663439400,"user":"user2","todo":"hello"}
