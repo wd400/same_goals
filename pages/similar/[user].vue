@@ -6,7 +6,7 @@
     Loading ...
   </div>
   <div v-else>
-     <div v-for="user in finalusers" v-bind:key="user">
+     <div v-for="user in result.result" v-bind:key="user">
 
     <NuxtLink :to="`/user/${user.user}`">
  
@@ -31,10 +31,5 @@ const finalusers=ref([])
 const {pending, data: result } = useFetch(config.API_BASE_URL+`/similar/${route.params.user}`, {server: false})
 //watch(users, (newTodos) => {})
 
-watch(result, async (newUsers)=>{
-   finalusers.value=newUsers.result
-}, {
-    deep: true
-})
 
 </script>

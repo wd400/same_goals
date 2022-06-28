@@ -21,9 +21,8 @@
 
 
     </div>
-    <div v-else>
-
-      {{finaldescription?finaldescription:""}}
+    <div v-else>   
+🖊️ {{finaldescription?finaldescription:""}}
     </div>
 
 
