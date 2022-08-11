@@ -28,8 +28,13 @@ const route = useRoute();
 const finalusers=ref([])
 
 
-const {pending, data: result } = useFetch(config.API_BASE_URL+`/similar/${route.params.user}`, {server: false})
+//refresh, error
+const {pending, data: result  } = useFetch(config.API_BASE_URL+`/similar/${route.params.user}`, {server: false})
 //watch(users, (newTodos) => {})
 
+
+</script>
+
+<script>
 
 </script>

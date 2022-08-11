@@ -9,8 +9,9 @@
    
     <div v-if="islogged">
 
-<textarea  class=" shadow  appearance-none border rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" v-model="finaldescription" type="text" id="name" name="name" required
+<textarea  class="shadow  appearance-none border rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" v-model="finaldescription" type="text" id="name" name="name" required
   placeholder="Description (about me, contact,...)"     maxlength="200" size="10"></textarea>
+
 
 
 
@@ -69,6 +70,13 @@ async function newdescription(){
   const result  = await $fetch(config.API_BASE_URL+ '/description' ,{
 method: 'post', body: { content: finaldescription.value  },server: false,
 credentials: 'include'} )
+
+if (result['status']==true){
+alert("done")
+} else {
+    alert(result['msg'])
+}
+
 
 }
 
