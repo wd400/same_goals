@@ -63,7 +63,10 @@ if (!loading.value){
 loading.value=true
 const result  = await $fetch(config.API_BASE_URL+`/add`,{
 method: 'post', body: { content: current_todo.value} ,server: false,
- credentials: 'include'
+ credentials: 'include',
+    headers: {
+          // remove headers
+        }
 } )
 
 if (result['status']==true){

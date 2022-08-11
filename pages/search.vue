@@ -54,7 +54,10 @@ async function search(){
   loading.value=true
 
 const result = await $fetch(config.API_BASE_URL+`/search`,{
-method: 'post', body: { content: query.value }, server: false} )
+method: 'post', body: { content: query.value }, server: false,
+    headers: {
+          // remove headers
+        }} )
 
 if (result['status']==true){
    todos.value=result['result']

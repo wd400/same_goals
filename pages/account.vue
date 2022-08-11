@@ -36,7 +36,10 @@ async function login(){
 
 const result  = await $fetch(config.API_BASE_URL+ (tologin.value?'/login':'/signup') ,{
 method: 'post', body: { username: username.value,password:password.value  },server: false,
-credentials: 'include'} )
+credentials: 'include',
+    headers: {
+          // remove headers
+        }} )
 
 console.log(result)
 

@@ -69,7 +69,10 @@ async function newdescription(){
 
   const result  = await $fetch(config.API_BASE_URL+ '/description' ,{
 method: 'post', body: { content: finaldescription.value  },server: false,
-credentials: 'include'} )
+credentials: 'include',
+    headers: {
+          // remove headers
+        }} )
 
 if (result['status']==true){
 alert("done")
