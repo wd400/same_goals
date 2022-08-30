@@ -3,6 +3,6 @@
 (your ad blocker may interfere with the site)
 
 <br>
-### Platform to share our list of life goals and find similar people to connect with, through AI (NLP).
+## Platform to share our list of life goals and find similar people to connect with, through AI (NLP).
 
  
