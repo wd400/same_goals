@@ -5,7 +5,7 @@ export default defineNuxtConfig({
     target: 'static',
     buildModules: ['@nuxtjs/tailwindcss'],
     publicRuntimeConfig: {
-        API_BASE_URL: "https://48a4-2a01-cb1d-83fc-e000-d1ea-1056-6e67-b6b1.eu.ngrok.io"
+        API_BASE_URL: "https://22c1-81-64-42-202.eu.ngrok.io"
     },
 
     app: {
